@@ -1,5 +1,5 @@
 {
-  "name": "react_main",
+  "name": "react_js",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,10 +8,6 @@
     "build-prod": "cross-env NODE_ENV=production webpack --config webpack.config.js",
     "dev": "cross-env NODE_ENV=development webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://gitlab.skillbox.ru/andrei_nesteruk/reactjs.git"
   },
   "author": "",
   "license": "ISC",
