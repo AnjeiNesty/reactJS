@@ -6,7 +6,7 @@ import styles from './header.less'
 function HeaderComponent() {
     return (
         <header>
-            <h1 className={styles.ddd}>Reddit for our own ddd</h1>
+            <h1 className={styles.ddd}>Hello React</h1>
         </header>
     )
 }
