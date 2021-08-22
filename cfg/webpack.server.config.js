@@ -1,6 +1,7 @@
 const path = require('path');
 const nodeExternals = require('webpack-node-externals')
 const NODE_ENV = process.env.NODE_ENV;
+const GLOBAL_CSS_REGEXP = /\.global\.css$/;
 
 
 module.exports = {
@@ -36,7 +37,18 @@ module.exports = {
                     },
                     'less-loader'
                 ],
-            }
+                exclude: GLOBAL_CSS_REGEXP
+            },
+            {
+                test: GLOBAL_CSS_REGEXP,
+                use: ['css-loader']
+            },
+            {
+                test: /\.(jpg|png)$/,
+                use: {
+                    loader: 'url-loader',
+                },
+            },
         ]
     },
     optimization: {

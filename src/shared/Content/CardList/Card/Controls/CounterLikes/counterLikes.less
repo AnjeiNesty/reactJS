@@ -1,0 +1,52 @@
+@import "/src/variables.global";
+
+.svgReverse {
+  transform: rotate(180deg);
+}
+.counterLikes {
+  display: flex;
+  align-items: center;
+  margin-left: -5px;
+}
+
+.counter {
+  font-size: 12px;
+  line-height: 14px;
+  color: @colorGreyC4;
+}
+.btn {
+  padding: 10px 5px;
+  position: relative;
+}
+
+@media all and (min-width: 1024px) {
+  .btnUp{
+    &:hover {
+      svg path{
+        fill: @colorGreen;
+      }
+    }
+  }
+  .btnDown{
+    &:hover {
+      svg path{
+        fill: @colorRed;
+      }
+    }
+  }
+  .btn {
+    padding: 5px;
+    svg path {
+      transition: all 0.3s;
+    }
+  }
+  .counterLikes {
+    flex-direction: column;
+  }
+
+  .counter {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+}

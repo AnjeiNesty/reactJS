@@ -1,0 +1,22 @@
+@import "/src/variables.global";
+
+.messages {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  padding: 10px 0;
+}
+.count {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 500;
+  color: @colorGreyC4;
+  margin-left: 6px;
+}
+
+
+@media all and (min-width: 1024px) {
+  .messages {
+    display: none;
+  }
+}

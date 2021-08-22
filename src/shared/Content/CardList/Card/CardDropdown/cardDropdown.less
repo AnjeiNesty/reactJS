@@ -1,0 +1,36 @@
+
+
+.wrapperButton {
+  position: absolute;
+  right: 15px;
+  top: 16px;
+  transform: rotate(90deg);
+}
+.btn {
+  width: 31px;
+  height: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: transparent;
+  transition: all 0.3s;
+  &:hover {
+    background: rgba(51, 51, 51, 0.1);
+  }
+}
+svg {
+  display: block;
+}
+
+
+@media all and (min-width: 1024px) {
+  .wrapperButton {
+    display: block;
+    right: 95px;
+    top: 50%;
+    transform: rotate(0) translateY(-50%);
+  }
+
+
+}

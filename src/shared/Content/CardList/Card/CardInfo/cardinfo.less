@@ -1,0 +1,79 @@
+@import "/src/variables.global";
+
+
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.postCaption {
+  position: relative;
+  border: none;
+  display: inline-flex;
+  transition: all 0.3s;
+}
+.postAuthor {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.nameAvatar {
+  display: flex;
+  align-items: center;
+}
+
+.published {
+  display: none;
+}
+
+.pubTime {
+  color: @colorGrey99;
+  * {
+    color: @colorGrey99;
+  }
+}
+
+.image {
+  display: block;
+  margin-right: 7px;
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.name {
+  margin-right: 5px;
+  color: @colorOrange;
+}
+.nameAvatar {
+  position: relative;
+}
+
+@media all and (min-width: 1024px) {
+  .cardInfo {
+    order: 2;
+    flex-direction: column-reverse;
+    flex: 1;
+    margin-bottom: 0;
+    padding-right: 75px;
+  }
+  .pubTime {
+    margin-right: 10px;
+  }
+  .nameAvatar {
+    order: 2;
+  }
+  .postCaption {
+    h2 {
+      transition: all 0.3s;
+    }
+    margin-bottom: 10px;
+  }
+
+  .published {
+    display: inline;
+  }
+}
+

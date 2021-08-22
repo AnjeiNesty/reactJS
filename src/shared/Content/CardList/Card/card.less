@@ -1,0 +1,42 @@
+@import "/src/variables.global";
+
+.card {
+  position: relative;
+  padding: 20px 20px 0;
+}
+.postLink {
+  position: static;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .card {
+    padding: 20px 40px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+    &:hover {
+      border-color: @colorGreyD9;
+      h2 {
+        color: @colorOrange;
+      }
+    }
+
+  }
+}
+
+
+@media all and (min-width: 1540px) {
+  .card {
+    padding: 20px 60px;
+  }
+}
