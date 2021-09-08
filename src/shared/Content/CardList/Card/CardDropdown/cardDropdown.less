@@ -1,0 +1,100 @@
+@import "/src/variables.global";
+
+.ulReset {
+  list-style: none;
+  padding: 0;
+}
+.ulReset li:before{
+  display: none;
+}
+.item {
+  cursor: pointer;
+  padding: 12px 20px;
+  position: relative;
+  text-align: center;
+  transition: all 0.3s;
+  color: @colorGrey99;
+  &:hover {
+    color: @colorOrange;
+    &:last-child {
+      color: @colorOrange;
+    }
+    svg {
+      path {
+        fill: @colorOrange;
+      }
+    }
+  }
+  svg {
+    path {
+      transition: all 0.3s;
+    }
+    margin-right: 6px;
+  }
+}
+.withIcon {
+  display: flex;
+  align-items: center;
+}
+.item:after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  background: #ECECEC;
+  top: 100%;
+  left: 20px;
+  width: calc(100% - 40px);
+}
+.item:last-child {
+  text-align: center;
+  color: @colorGrey66;
+  background: @colorGreyD9;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.item:last-child:after {
+  display: none;
+}
+.wrapperButton {
+  position: absolute;
+  right: 15px;
+  top: 16px;
+}
+.btn {
+  transform: rotate(90deg);
+  width: 31px;
+  height: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: transparent;
+  transition: all 0.3s;
+  &:hover {
+    background: rgba(51, 51, 51, 0.1);
+  }
+}
+svg {
+  display: block;
+}
+.comment,.share,.save {
+  display: none;
+}
+
+@media all and (min-width: 1024px) {
+  .comment,.share,.save {
+    display: flex;
+  }
+  .wrapperButton {
+    display: block;
+    right: 95px;
+    top: 50%;
+    transform: rotate(0) translateY(-50%);
+  }
+}
+
+@media all and (min-width: 1540px) {
+  .close {
+    display: none;
+  }
+}
