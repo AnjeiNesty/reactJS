@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  position: relative;
+}
+
+.listContainer {
+
+}
+.list {
+  top: calc(100% + 10px);
+  right: 0;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  position: absolute;
+}
+
+@media all and (min-width: 1024px) {
+  .list {
+    right: 50%;
+    transform: translateX(50%);
+    top: calc(100% + 20px);
+  }
+}

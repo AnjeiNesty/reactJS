@@ -6,6 +6,9 @@ interface IContentProps {
     children?: React.ReactNode;
 }
 
+
+
+
 const Content = ({children}: IContentProps) => {
     return (
         <React.Fragment>
